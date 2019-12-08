@@ -57,3 +57,13 @@ Finally, let’s click on the Tea Utilities link. This link will bring you to a 
 Click the “Start” button when you start steeping your tea to start the timer. The “Reset” button will allow you to reset the timer. The timer will automatically stop when it is done. 
 
 To log out of your account, click the Log Out link in the navigation bar. That’s it! Thank you for joining us at Steep It Together, and we hope this was a helpful overview of our website. Cheers! 
+
+
+** How to Run Steep It Together Locally for Linux/Mac **
+1. Go to `https://github.com/emmarogge/steepittogether_cs50` and clone the repository to your local workspace.
+2. Open the Terminal and navigate to the steepittogether folder where the project is located.
+3. Execute the following in the terminal, in the steepittogether directory:
+	`pip3 install -r requirements.txt`
+	`export FLASK_APP=application.py`
+	`flask run &`
+4. Navigate to `http://127.0.0.1:5000/login` in the browser (preferably, Chrome). Proceed from the beginning of the README.
