@@ -1,0 +1,113 @@
+#moment-date-formatted, #moment-time-formatted {
+    display: none;
+}
+
+#logteaheader {
+
+    font-family: "dawning of a new day";
+    font-weight: bolder;
+    font-size: 275%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.form-group {
+    padding-top: 4%;
+    text-align: center;
+    font-family: "amatic sc";
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 100%;
+
+    background-color: #c7c7d7;
+    opacity: 0.95;
+    padding: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-color: white;
+}
+
+#choosetealog {
+
+    font-family: "amatic sc";
+    padding: 20px;
+    background-color: #c7c7d7;
+    opacity: 0.96;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-color: white;
+    border-bottom-style: none;
+    border-radius: 10px;
+}
+
+
+.btn.btn-primary {
+    background-color: #838189;
+    border-color: #838189;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding: 2%;
+    text-align: center;
+    width: min-content;
+    font-size: 150%;
+    font-family: "Amatic SC";
+    padding: 8px 32px;
+    margin: 30px;
+    height: min-content
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#photo-input-group.file {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-color: white;
+    font-family: "Amatic SC";
+}
+
+#photo-div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: transparent;
+    outline-color: #8a8aac;
+    font-color: white;
+    border-radius: 10px;
+}
+
+label.text, input#photo-button {
+    background-color: #c7c7d7;
+    border-color: #c7c7d7;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Amatic SC";
+    font-size: 150%;
+    text-align: center;
+    color: white;
+}
+
+
+.btn.btn-primary:hover {
+
+    background-color: #5c5b61;
+    border-color: #5c5b61;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.btn.btn-primary:active {
+
+    background-color: #5c5b61;
+    border-color: #5c5b61;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

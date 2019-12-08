@@ -1,0 +1,96 @@
+.entry-box {
+    background-color: #8a8aa9;
+    opacity: .9;
+    margin: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: "Amatic SC";
+    font-size: 200%;
+    border-style: double;
+    border-color: #d3d3e0;
+    border-width: 5px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#journalyouenjoyed {
+
+    color: white;
+    font-family: "dawning of a new day";
+    font-weight: bold;
+    font-size: 105%;
+    margin: 10px;
+}
+
+.journal-photo-col {
+    width: 200px;
+    height: auto;
+    display: table-cell;
+    font-family: "Amatic SC";
+}
+
+.journal-photo {
+    /*display: table-row;*/
+    display: inline;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #8a8aa9 !important;
+    border-radius: 15px;
+    font-family: "Amatic SC";
+}
+
+th.journal-label {
+    height: 20px;
+    background-color: #8a8aa9;
+    font-family: "Amatic SC";
+    font-size: 200%;
+    color: white;
+}
+
+.row {
+    display: table-row;
+    padding-left: 15px;
+    font-family: "Amatic SC";
+}
+
+.journal-entry {
+    display: table-row;
+    padding: 100px;
+    width: 50%;
+    border-radius: 5px;
+    font-family: "Amatic SC";
+    color: #d3d3e0;
+}
+
+.notes-row {
+    display: table-row;
+    width: 100%;
+    font-family: "Amatic SC";
+/*hello*/
+}
+
+td.notes {
+    font-size: 30;
+}
+
+.notes-row.notes {
+    display: table-row;
+    width: 100%;
+    border-bottom: 1px solid;
+    color: black;
+    font-family: "Amatic SC";
+}
+
+.notes-header {
+    padding-top: 50px;
+    font-family: "Amatic SC";
+    border-width: 3px;
+    border-color: black;
+}

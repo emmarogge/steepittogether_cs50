@@ -1,0 +1,84 @@
+<html lang="en">
+<link href="/static/css/log.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Dawning of a New Day">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Amatic SC">
+<script type="text/javascript">
+        function getDate() {
+            var now = moment();
+            var mDate = moment(now).format('M/D/YYYY');
+            console.log("mDate: " + mDate);
+            return mDate;
+        }; 
+        function getTime() {
+            var now = moment();
+            var mTime = moment(now).format('h:mm a');
+            console.log("mTime: " + mTime);
+            return mTime;
+        }
+</script>
+<script language="javascript">
+$(document).ready(function () {
+    $(".select").onchange = function () {
+        var selected = $("#tea option:selected");
+    };
+    $("#tea").on("blur", function() {
+        var value = $("#tea option:selected").val;
+        console.log("value: " + value);
+    });
+})
+</script>
+<script language="javascript">
+    $(document).ready(function() {
+        var date = getDate();
+        var time = getTime();
+        document.getElementsByName("moment-date-formatted")[0].value = getDate();
+        document.getElementsByName("moment-time-formatted")[0].value = getTime();
+        console.log("date: " + document.getElementsByName("moment-date-formatted")[0].value);
+        console.log("time: " + document.getElementsByName("moment-date-formatted")[0].value);
+    })
+</script>
+{% extends "layout.html" %}
+{% block title %}
+    Tea Drinking Log
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+{% endblock %}
+{% block main %}
+<div id="logteaheader">
+    <h8>Log a tea into your journal...</h8>
+</div>
+    <form action="{{ url_for('log') }}" method="post" enctype=multipart/form-data id="log-form" class="form-horizontal">
+        <input type="hidden" name="moment-date-formatted" value="">
+        <input type="hidden" name="moment-time-formatted" value="">
+        <div class="form-group-md">
+          <div id="choosetealog" class="input-select">
+              <select class="tea form-control" name="tea-select" required="required">
+                <option value="" selected disabled>Choose Your Tea!</option>
+                {% for item in items %}
+                <option value="{{item['amount']}}_{{item['brand']}}_{{item['name']}}">
+                    {{item['brand']}} {{item['name']}}
+                </option>
+                 {% endfor %}
+              </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" id="amount" min="1" placeholder="Amount Used" pattern="^[0-9]+$" min="0.5" type="number" step="any">
+        </div>
+        <div class="form-group">
+            <label class="text" for="notesInput">Notes about your tea drinking experience...</label>
+            <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <div class="form-group" id="photo-input-group">
+        	<div id="photo-div">
+	            <label class="text" for="photo">Upload a photo of your tea!</label>
+	            <input type="file" name="photo" id="photo-button">
+        	</div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="log-button">Log</button>
+    </form>
+{% endblock %}
+</html>

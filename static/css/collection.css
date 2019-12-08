@@ -1,0 +1,90 @@
+table {
+	border-collapse: border;
+	outline: none;
+	border:none; 
+	opacity: 0.97;
+}
+
+.table thead th, .table td {
+	outline: none;
+	border: none;
+	padding: 20px;
+}
+
+.table {
+
+	border-radius: 25px;
+	padding: 25%;
+}
+
+.tea-row {
+    background-color: #c7c7d7;
+	border: none
+}
+
+#heading {
+    background-color: #5c5b61;
+    border-color: #5c5b61;
+    border: none;
+    box-shadow: none;
+    border-top: none;
+    color: white;
+    font-family: "amatic sc";
+    font-weight: bold;
+    letter-spacing: 3px;
+	font-size: 200%;
+
+}
+
+.btn#add-tea-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: white;
+	border-color: #b6b9ad;
+	background-color: #b6b9ad;
+	font-family: "amatic sc";
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 150%;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.btn#add-tea-button:hover {
+
+	background-color: #a5a89a;
+	border-color: #a5a89a;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.btn#add-tea-button:active {
+
+	background-color: #a5a89a;
+	border-color: #a5a89a;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+
+}
+
+#myteahead {
+
+	font-family: "dawning of a new day";
+	font-size: 350%;
+	margin: none;
+	padding: none;
+	font-weight: bold;
+
+}
+
+#row.tea-row {
+
+	font-family: "amatic sc";
+	font-weight: bold;
+	font-size: 175%;
+	letter-spacing: 3px;
+
+}

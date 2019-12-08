@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Dawning of a New Day">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Amatic SC">
+<style>
+    p {
+        font-family: "Amatic SC";
+        font-size: 250%;
+    }
+.btn.btn-primary#log-in-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    border-color: #b6b9ad;
+    background-color: #b6b9ad;
+    font-family: "amatic sc";
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 150%;
+}
+input {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.reset-link {
+    font-family: "Amatic SC";
+    font-size: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    width: 25%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-top: 0.4rem;
+}
+</style>
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <p class="centered">Steep It Together is a website for documenting your experiences with tea!<br> Log in or create a free account today!</p>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div id="login-button">
+            <button class="btn btn-primary" id="log-in-button" type="submit">Log In</button>
+        </div>
+        <div id="reset-link-div">
+            <a class="reset-link" id="reset" href="/reset">Forgot your password?</a>
+        </div>
+    </form>
+{% endblock %}
+</html>

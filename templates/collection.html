@@ -1,0 +1,70 @@
+<html lang="en">
+<link href="/static/css/collection.css" rel="stylesheet">
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Dawning of a New Day">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Amatic SC">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        console.log("Applying getValues() to document\n")
+        getValues();
+    });
+    function getValues() {
+            var rows = document.querySelectorAll("#row");
+            console.log(rows);
+            rows.forEach(function (currentRow) {
+                console.log(currentRow);
+                var prep = currentRow.querySelector('.preparation').innerHTML;
+                var brand = currentRow.querySelector('.brand').innerHTML;
+                var name = currentRow.querySelector('.name').innerHTML;
+                var amt = currentRow.querySelector(".amount").innerHTML;
+                if (prep == "Loose Leaf" || prep == "Matcha Powder") {
+                    var amt_text = String(amt) + " ounces"
+                    console.log(amt_text)
+                    currentRow.querySelector(".amount").innerHTML = amt_text
+                } else if (prep == "Tea Bags"){
+                    var amt_text = String(amt) + " bags"
+                    console.log(amt_text)
+                    currentRow.querySelector(".amount").innerHTML = amt_text
+                }
+            })}
+</script>
+
+{% extends "layout.html" %}
+{% block title %}
+    Your Tea Collection
+{% endblock %}
+
+{% block main %}
+    <div id="myteahead">
+    <h> My Tea Collection </h>
+    </div>
+    <table class="table" border="0|0" id="teas">
+        <thead id="heading">
+            <tr>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Preperation</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+    {% for item in items %}
+        <tr id="row" class="tea-row">
+            <td class="cell" class="brand">{{ item['brand'] }}</td>
+            <td class="name">{{ item['name'] }}</td>
+            <td class="type">{{ item['type']}}</td>
+            <td class="preparation">{{ item['preparation']}}</td>
+            <td class="amount">{{ item['amount']}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <form action="{{ url_for('input_tea') }}" method="get">
+        <td class="add-tea">
+            <button class="btn" type="submit" id="add-tea-button">Add A Tea</button>
+        </td>
+    </form>
+{% endblock %}
+</html>

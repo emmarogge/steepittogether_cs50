@@ -1,0 +1,114 @@
+.navbar {
+    background-color:  #A3A9BE;
+    height: min-content;
+    border-radius: 20px;
+    opacity: 0.85;
+
+}
+
+#brandtitle {
+    font-family: "dawning of a new day";
+    font-weight: bold;
+    font-size: 350% !important;
+    padding: none;
+    margin: none;
+
+}
+
+#navbar.navbar-collapse {
+    height: min-content;
+    border-radius: 20px;
+    font-family: "amatic sc";
+    letter-spacing: 2px;
+    color: black;
+    font-weight: bolder;
+    word-spacing: 2px;
+    font-size: 150%;
+
+}
+
+button.btn.btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #8a8aac;
+    outline-color: #8a8aac;
+    border-color: #8a8aac;
+}
+
+body
+{
+    margin: 50px;
+    background-image: url(https://i.imgur.com/XQ9OZGx.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+p {
+    background-color:  #A3A9BE;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    /*font-family: 'swistblnk_neamentsregular';*/
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+.indented
+{
+    margin: 0px 25px;
+}
+
+.start-timer-button {
+    width: 100%;
+    text-align: center;
+    /*font-family: 'swistblnk_neamentsregular';*/
+}
+
+.tea-timer-box
+{
+    background-color: white;
+    color: black;
+    text-align: center;
+    outline: 5px;
+    outline-color: #8a8aac
+}
+
+.teaReadyMessage_show{
+    display: block;
+    /*font-family: 'swistblnk_neamentsregular';*/
+}
+
+.teaReadyMessage_hide{
+    display: none;
+}
+
+.timer {
+    width: 100%;
+    font-size: large;
+    /*font-family: 'swistblnk_neamentsregular';*/
+}
+
+.centered{
+    text-align: center;
+}
+
+.text{
+    background-color: white;
+}
+
