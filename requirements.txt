@@ -44,4 +44,4 @@ pipreqs==0.4.10
       urllib3==1.25.7
 pytz==2019.3
 setuptools==41.6.0
-wheel==0.33.6
+wheel==0.38.1
