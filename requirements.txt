@@ -43,5 +43,5 @@ pipreqs==0.4.10
       idna==2.8
       urllib3==1.25.7
 pytz==2019.3
-setuptools==41.6.0
+setuptools==65.5.1
 wheel==0.33.6
